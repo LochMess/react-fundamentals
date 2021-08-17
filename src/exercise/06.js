@@ -38,14 +38,14 @@ function UsernameForm({onSubmitUsername}) {
 
   const handleSubmit = event => {
     event.preventDefault()
-    onSubmitUsername(event.target.elements.usernameInput.value)
+    // onSubmitUsername(event.target.elements.usernameInput.value)
     onSubmitUsername(inputRef.current.value)
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Username:</label>
+        <label htmlFor='usernameInput'>Username:</label>
         <input
           id="usernameInput"
           ref={inputRef}
